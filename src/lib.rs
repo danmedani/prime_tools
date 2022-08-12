@@ -136,7 +136,7 @@ pub fn get_prime_factors_with_counts(x: u32, primes: &Vec<u32>) -> HashMap<u32, 
 /// ```
 pub fn is_u32_prime(x: u32) -> bool {
     if x < 2 { return false; }
-    (!is_u32_definitely_composite(x)) && is_u32_definately_prime(x)
+    (!is_u32_definitely_composite(x)) && is_u32_definitely_prime(x)
 }
 
 /// Figures out if a u64 is prime.
@@ -167,7 +167,7 @@ pub fn is_u32_prime(x: u32) -> bool {
 /// ```
 pub fn is_u64_prime(x: u64) -> bool {
     if x < 2 { return false; }
-    (!is_u64_definitely_composite(x)) && is_u64_definately_prime(x)
+    (!is_u64_definitely_composite(x)) && is_u64_definitely_prime(x)
 }
 
 
@@ -273,7 +273,7 @@ fn get_prime_bit_map(x: u64) -> BitVec {
     prime_map
 }
 
-fn is_u64_definately_prime(x: u64) -> bool {
+fn is_u64_definitely_prime(x: u64) -> bool {
     if x % 2 == 0 {
         return false;
     }
@@ -297,7 +297,7 @@ fn is_u64_definitely_composite(_x: u64) -> bool{
     return false;
 }
 
-fn is_u32_definately_prime(x: u32) -> bool {
+fn is_u32_definitely_prime(x: u32) -> bool {
     if x == 2 || x == 3 { return true; }
     if x % 2 == 0 || x % 3 == 0 { return false; }
 
