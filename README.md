@@ -1,5 +1,5 @@
 
-# prime_tools [![Crate](https://img.shields.io/crates/v/prime_tools.svg)](https://crates.io/crates/prime_tools) [![Build Status](https://travis-ci.org/danmedani/prime_tools.svg?branch=master)](https://travis-ci.org/danmedani/prime_tools)
+# prime_tools [![Crate](https://img.shields.io/crates/v/prime_tools.svg)](https://crates.io/crates/prime_tools)
 This util provides a few tools for working with prime numbers.
 
 Mostly for personal use with project euler problems. :)
