@@ -165,6 +165,33 @@ pub fn is_u32_prime(x: u32) -> bool {
 ///     false
 /// );
 /// ```
+///
+/// ```
+/// assert_eq!(
+///     prime_tools::is_u64_prime(2),
+///     true
+/// );
+///
+/// ```
+/// assert_eq!(
+///     prime_tools::is_u64_prime(3),
+///     true
+/// );
+/// ```
+///
+/// ```
+/// assert_eq!(
+///     prime_tools::is_u64_prime(4),
+///     false
+/// );
+/// ```
+///
+/// ```
+/// assert_eq!(
+///     prime_tools::is_u64_prime(5),
+///     true
+/// );
+/// ```
 pub fn is_u64_prime(x: u64) -> bool {
     if x < 2 { return false; }
     (!is_u64_definitely_composite(x)) && is_u64_definately_prime(x)
@@ -274,6 +301,9 @@ fn get_prime_bit_map(x: u64) -> BitVec {
 }
 
 fn is_u64_definately_prime(x: u64) -> bool {
+    if x <= 3 {
+        return x > 1;
+    }
     if x % 2 == 0 {
         return false;
     }
